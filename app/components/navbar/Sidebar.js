@@ -5,6 +5,7 @@ import Network from "@/app/utils/network/Network";
 
 import cookieCutter from 'cookie-cutter';
  import cookiesNames from '@/app/utils/constant';
+ import styles from "./Sidebar.style";
 
 export default function Sidebar() {
     const isAccess = useIsAccess()
@@ -13,42 +14,48 @@ export default function Sidebar() {
     //   cookieCutter.get(cookiesNames.HOW_THIS_MEASUREMENT_IS) === undefined ? window.location.href = Network.suiteNetwork
     //    : ''
     // })
-    
+
+    // sidebar-dark .nav-item .nav-link :: font color
+
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        // backgroundColor : '#fff'
       }}
     >
       <ul
         // className="navbar-nav bg-gradient-light sidebar sidebar-dark accordion"
-        className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        className="navbar-nav   sidebar sidebar-dark accordion"
 
-        style={{backgroundColor : 'red'}}
+        style={{backgroundColor : '#fff',
+      borderRight : '2px solid #f6f6f6'
+      }}
         id="accordionSidebar"
       >
          <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <i className="fas fa-laugh-wink"></i>
+                  <span style={styles.brandColor}> <i className="fas fa-laugh-wink"></i> </span>  
                 </div>
-                <div className="sidebar-brand-text mx-1">Monstar People</div>
+                <div className="sidebar-brand-text mx-1">
+                  <span style={styles.titleStyle}>Monstar <span style={{color : '#69c7bd'}}>People</span> </span></div>
             </a>
 
         {/* <hr className="sidebar-divider my-0" /> */}
 
-        <li className="nav-item active">
-          <Link className="nav-link" href="/">
-            <i className="fas fa-home" color="#000"></i>
-            <span>Home</span>
+        <li className="nav-item ">
+          <Link className="nav-link" href="/">         
+                  <i className="fas fa-home" ></i>                
+            <span style={styles.menuFont}>Home</span>
           </Link>
         </li>
 
-        <hr className="sidebar-divider" />
+        {/* <hr className="sidebar-divider" /> */}
         <li className="nav-item ">
-          <Link className="nav-link" href="/dashboard">
-            <i className="fas fa-table" color="#000"></i>
-            <span>Dashboard</span>
+          <Link className="nav-link text-xs" href="/dashboard">
+            <i className="fas fa-table" ></i>
+            <span  style={styles.menuFont}>Dashboard</span>
           </Link>
         </li>
        
@@ -57,14 +64,14 @@ export default function Sidebar() {
         <li className="nav-item">
           <a className="nav-link" href="/my-info">
             <i className="fas fa-user"></i>
-            <span>My Info</span>
+            <span style={styles.menuFont}>My Info</span>
           </a>
         </li>
        
         <li className="nav-item">
           <a className="nav-link" href="/people">
           <i className="fas fa-users"></i>
-            <span>People</span>
+            <span style={styles.menuFont}>People</span>
           </a>
         </li>
 
@@ -78,7 +85,7 @@ export default function Sidebar() {
             aria-controls="collapsePages99"
           >
             <i className="fas fa-folder"></i>
-            <span>Reports </span>
+            <span style={styles.menuFont}>Reports </span>
           </a>
           <div
             id="collapsePagesReport"
@@ -117,7 +124,7 @@ export default function Sidebar() {
       aria-controls="collapsePagesPayroll"
     >
       <i className="fas fa-comment-dollar"></i>
-      <span>Payroll </span>
+      <span style={styles.menuFont}>Payroll </span>
     </a>
     <div
       id="collapsePagesPayroll"
@@ -167,7 +174,7 @@ export default function Sidebar() {
             aria-controls="collapsePagesMaster"
           >
             <i className="fas fa-table-tennis"></i>
-            <span>Master </span>
+            <span style={styles.menuFont}>Master </span>
           </a>
           <div
             id="collapsePagesMaster"
@@ -238,7 +245,7 @@ export default function Sidebar() {
             aria-controls="collapsePages99"
           >
             <i className="fas fa-fw fa-cog"></i>
-            <span>Setting </span>
+            <span style={styles.menuFont}>Setting </span>
           </a>
           <div
             id="collapsePages99"

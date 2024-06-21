@@ -39,8 +39,11 @@ export default function RootLayout({ children }) {
           <PersistGate persistor={persistor}>
             <div id="wrapper">
               <Sidebar />
+              {/* <Sidebar /> */}
 
-              <div id="content-wrapper" className="d-flex flex-column" >
+              <div id="content-wrapper" className="d-flex flex-column" style={{
+                backgroundColor : '#fff'
+              }}>
                 <Topbar />
                 <Breadcrumb />
                 {children}

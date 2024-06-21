@@ -2,6 +2,7 @@ import commonStyle from "../style/Styles"
 
 const styles ={
     container : {
+        backgroundColor : '#fdfdfd',
         width : '55%',
         margin : 0 ,
         // padding : 0

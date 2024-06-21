@@ -1,7 +1,8 @@
 const commonStyle = {
 
     color : {
-        basicColor : '#37B5A7',
+        brandColor : '#69c7bd',
+        basicColor : '#37B5A7',//
         red : '#FF033E',
         black : '#21263C',
         white : '#f6f6f6',
@@ -11,7 +12,17 @@ const commonStyle = {
         green : '#69C7BD',
         coral : 'coral'
     },
-    cursor :  'pointer'
+    cursor :  'pointer',
+    size  : {
+        title : 18,
+        menuFont : 15,
+        
+    },
+    font : {
+        titleFont : 'Fantasy' ,
+        fontFamily : ''
+    }
+    
 }
 
 export default commonStyle ;
